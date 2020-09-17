@@ -15,7 +15,7 @@ h6 {
   font-family: "BPG Nino Mtavruli";
 }
 
-.line {
+.redline {
   width: 100%;
   height: 5px;
   background: #faf6ec;
@@ -200,6 +200,8 @@ header {
   position: relative;
   background: #fbfaf9;
   .products {
+    width: 85vw;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     .product {
