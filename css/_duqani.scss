@@ -1,0 +1,158 @@
+.duqani-banner {
+  position: relative;
+  padding-top: 169px;
+  height: 100vh;
+  .duqani-1 {
+    width: 21vw;
+  }
+  .duqani-2 {
+    width: 28vw;
+    position: absolute;
+    top: 276px;
+    left: 21.6vw;
+  }
+  .duqani-3 {
+    position: absolute;
+    width: 21vw;
+    left: 8vw;
+    top: calc(21vw + 179px);
+  }
+
+  .duqani-bg {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 16vw;
+  }
+  .text {
+    position: absolute;
+    right: 7vw;
+    top: 21vw;
+    h1 {
+      font-size: 2.5vw;
+    }
+    p {
+      width: 28vw;
+    }
+  }
+}
+
+.reception {
+  position: relative;
+  background-image: url("../images/duqani-big.png");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  height: 100vh;
+  img {
+    width: 100%;
+
+    object-fit: cover;
+  }
+  .carousel-prev,
+  .carousel-next {
+    width: 4.5vw;
+  }
+
+  .carousel-prev {
+    position: absolute;
+    left: 16vw;
+    bottom: 15vw;
+    cursor: pointer;
+    transition: 100ms all;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .carousel-next {
+    position: absolute;
+    left: 56.5vw;
+    bottom: 29vw;
+    cursor: pointer;
+    transition: 100ms all;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .text {
+    margin-bottom: -100px;
+    margin-right: 7.25vw;
+    background: #333333;
+    color: #ffffff;
+    padding: 2.6vw;
+    bottom: -6vw;
+    border: 1px solid #707070;
+    width: 28vw;
+    height: auto;
+    p {
+      width: 23vw;
+    }
+    h2 {
+      font-size: 2.5vw;
+    }
+    a {
+      color: #9b9b9b;
+      transition: 100ms all;
+      font-size: 1.25vw;
+
+      i {
+        padding-left: 1vw;
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
+    .slick-dots {
+      display: flex;
+      li {
+        button {
+          &:before {
+            color: #fff !important;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .slick-slide {
+      outline: none;
+    }
+  }
+}
+
+.text-from-chef {
+  position: relative;
+  padding: 200px 0;
+
+  h1 {
+    font-size: 2.5vw;
+  }
+
+  .text {
+    p {
+      width: 35vw;
+    }
+  }
+  .cit {
+    border-bottom: 3px solid #e5e5e5;
+    font-size: 1.6vw;
+    width: 28vw;
+    position: absolute;
+    right: 26vw;
+    top: 28vw;
+    span {
+      font-size: 0.8vw;
+      position: absolute;
+      top: 130%;
+      right: 10vw;
+    }
+  }
+  .chef-image {
+    width: 21vw;
+    position: absolute;
+    right: 14vw;
+    top: 14vw;
+  }
+}

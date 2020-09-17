@@ -1,0 +1,31 @@
+.lukma-banner {
+  position: relative;
+  height: 100vh;
+  .lukma-bg {
+    position: absolute;
+    width: 15.6vw;
+    top: 9vw;
+    left: 4.1vw;
+  }
+  .lukma-1 {
+    position: absolute;
+    width: 28vw;
+    right: 0;
+    top: 7vw;
+  }
+  .lukma-2 {
+    position: absolute;
+    width: 28.6vw;
+    right: 20.5vw;
+    top: 18vw;
+  }
+  .text {
+    position: absolute;
+    top: 400px;
+    width: 28vw;
+    left: 7vw;
+    h1 {
+      font-size: 2.5vw;
+    }
+  }
+}

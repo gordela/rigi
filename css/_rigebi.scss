@@ -1,0 +1,66 @@
+.rigebi {
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  .rigi {
+    position: relative;
+    height: 100vh;
+    h2 {
+      font-size: 2.5vw;
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      p {
+        width: 28vw;
+      }
+      a {
+        color: #999587;
+        font-family: BPG Nino Mtavruli;
+        transition: 100ms;
+        i {
+          padding-left: 2vw;
+        }
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    .bg {
+      position: absolute;
+
+      width: 55vw;
+    }
+    .shop {
+      width: 26.3vw;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.left {
+      .bg {
+        left: 0;
+        transform: translateX(-35%);
+      }
+      .shop {
+        left: 22vw;
+      }
+      .text {
+        right: 14vw;
+      }
+    }
+    &.right {
+      .bg {
+        right: 0;
+        transform: translateX(35%);
+      }
+      .shop {
+        right: 22vw;
+      }
+      .text {
+        left: 14vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,294 @@
+@import "_fonts.scss";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "BPG Nino Mtavruli";
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background: #faf6ec;
+  .red {
+    width: 0;
+    background: #e50019;
+    height: 5px;
+    transition: 500ms;
+  }
+}
+
+.container {
+  width: 85vw;
+  margin: auto;
+}
+
+.slick-dots {
+  li {
+    button {
+      &:before {
+        font-size: 12px;
+      }
+    }
+  }
+}
+nav {
+  font-family: Bebas;
+}
+p {
+  font-family: Firago;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.animation {
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: 1000ms all ease;
+  background: transparent;
+  z-index: 999;
+  width: 100%;
+  &.white {
+    background: #fff;
+  }
+  .logo {
+    width: 33vw;
+    object-fit: contain;
+  }
+  .left,
+  .right {
+    margin: 40px 50px;
+    .menu-btn {
+      margin-left: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .navbar {
+    background: #fff;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    transition: 0.5s all ease;
+    box-shadow: -50px 0px 99px 0px rgba(0, 0, 0, 0.1);
+    font-size: 2.5vw;
+
+    display: flex;
+    width: 36vw;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+      &:hover {
+        transition: 0.2s ease all;
+        color: #f5d21e;
+        a {
+          transition: 0.2s ease all;
+          color: #f5d21e;
+        }
+      }
+    }
+    .dropdown {
+      .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6vw;
+        color: #8e8e8e;
+        list-style-type: disc;
+        a {
+          color: #8e8e8e;
+          &:hover {
+            transition: 0.2s ease all;
+            color: #f5d21e;
+          }
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      i {
+        padding: 5px;
+        color: #cccccc;
+        transition: 0.5s all ease;
+      }
+      .fa-facebook-square {
+        &:hover {
+          color: #4267b2;
+        }
+      }
+
+      .fa-instagram {
+        border-radius: 10px;
+        &:hover {
+          color: #fff;
+          background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+          );
+        }
+      }
+    }
+    .bottom {
+      text-align: center;
+    }
+    .phone-link {
+      color: #8e8e8e;
+      font-size: 14px;
+    }
+    .fa-times {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      cursor: pointer;
+    }
+    .menu {
+      padding-left: 25%;
+      position: relative;
+      top: 50px;
+      li {
+        &.active {
+          color: #f5d21e;
+          > a {
+            color: #f5d21e;
+          }
+        }
+      }
+    }
+
+    &.active {
+      right: 0;
+    }
+  }
+}
+
+.meniu {
+  position: relative;
+  background: #fbfaf9;
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .product {
+      &:first-child {
+        background: url("../images/product-bg.png");
+        background-position: center;
+        background-size: contain;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 7.5px;
+      padding: 7.5px;
+      background: #fff;
+      .text {
+        width: 100%;
+        p,
+        h2 {
+          padding-left: 20px;
+        }
+        h2 {
+          color: #e50019;
+        }
+        background: #fff;
+        text-align: left;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .load-more {
+    padding: 100px;
+    text-align: center;
+    input {
+      font-family: BPG Nino Mtavruli;
+      border: none;
+      outline: none;
+      color: #8e8e8e;
+      background: none;
+      font-size: 1.2vw;
+    }
+  }
+  .topline {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  .botline {
+    position: absolute;
+    width: 100%;
+    transform: translateY(50%);
+    bottom: 0;
+  }
+  .heading {
+    display: flex;
+    color: #8e8e8e;
+    justify-content: center;
+    img {
+      width: 6.2vw;
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 2.5vw;
+      padding: 60px 45px;
+    }
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    font-family: BPG Nino Mtavruli;
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      li {
+        padding: 0 1vw;
+        &.active {
+          color: #e50019;
+        }
+      }
+    }
+  }
+}
+
+@import "_rigebi.scss";
+@import "_duqani.scss";
+@import "_banner.scss";
+@import "_history.scss";
+@import "_footer.scss";
+@import "_lukma_puri.scss";

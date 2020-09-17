@@ -1,0 +1,44 @@
+.banner {
+  position: relative;
+  height: 100vh;
+
+  .rigi {
+    position: absolute;
+    top: 10vw;
+    left: 4.5vw;
+    width: 18vw;
+  }
+  .main-1 {
+    position: absolute;
+    top: 120px;
+    right: 29vw;
+    width: 21vw;
+    object-fit: contain;
+  }
+
+  .main-2 {
+    position: absolute;
+    top: 24vw;
+    right: 15vw;
+    width: 28vw;
+    object-fit: contain;
+  }
+  .main-3 {
+    position: absolute;
+    bottom: 0;
+    right: 44vw;
+    transform: translateY(50%);
+    width: 20vw;
+  }
+  .text {
+    position: absolute;
+    left: 14vw;
+    top: 15vw;
+    h1 {
+      font-size: 2.5vw;
+    }
+    p {
+      width: 28vw;
+    }
+  }
+}

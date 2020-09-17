@@ -1,0 +1,28 @@
+footer {
+  .logo {
+    width: 6vw;
+    object-fit: contain;
+    padding: 3vw 0;
+  }
+  .line {
+    border-bottom: 1px solid #e5e5e5;
+    color: #8e8e8e;
+  }
+  .slider-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .slider {
+      margin: 110px 20px;
+      padding: 3vw 6vw 6vw 3vw;
+      box-shadow: 1.6vw 1.6vw 8vw 0px rgba(0, 0, 0, 0.05);
+      border-radius: 50px;
+      color: #8e8e8e;
+      img {
+        width: 16vw;
+        height: 16vw;
+        object-fit: contain;
+      }
+    }
+  }
+}
