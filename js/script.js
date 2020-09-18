@@ -28,13 +28,13 @@ $(".carousel-next").click(function (e) {
   e.preventDefault();
   $(this).parent().find(".duqani-slider").slick("slickNext");
 });
-
-$(window).scroll(function () {
-  var y = $(this).scrollTop();
-  console.log(y);
-  if (y > 50) {
-    $("#header").addClass("white");
-  } else {
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
     $("#header").removeClass("white");
+  } else {
+    $("#header").addClass("white");
   }
-});
+  prevScrollpos = currentScrollPos;
+};

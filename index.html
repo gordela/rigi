@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rigi</title>
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -19,11 +26,8 @@
       </div>
 
       <div class="right">
-        <img src="./images/shop.png" alt="Shop" /><img
-          class="menu-btn"
-          src="./images/menu.png"
-          alt="Menu"
-        />
+        <a href="shop.html"> <img src="./images/shop.png" alt="Shop" /></a
+        ><img class="menu-btn" src="./images/menu.png" alt="Menu" />
       </div>
       <nav class="navbar">
         <i class="fa fa-times"></i>
@@ -66,6 +70,20 @@
     <section class="animation">
       <div class="redline"><div class="red"></div></div>
       <div class="voice"></div>
+      <div id="vrclad">
+        <a class="btn-vrclad" href="#">
+          <img class="vrclad" src="./mainpage/vrclad.png" alt="Vrclad"
+        /></a>
+        <a class="rigi" href="rigi.html">
+          <img src="./mainpage/rigi.png" alt="Rigi"
+        /></a>
+        <a class="adg" href="https://maps.google.com">
+          <img src="./mainpage/adg.png" alt="Adgilmdebareoba"
+        /></a>
+        <a class="mogv" href="contact.html">
+          <img src="./mainpage/mogv.png" alt="Mogvweret"
+        /></a>
+      </div>
       <img
         class="anim-image"
         src="./mainpage/loading-1.png"
@@ -90,114 +108,6 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="./js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      var counter = 1;
-      var oddeven = 2;
-      var timer;
-      var loading = 0;
-      var loadingTimer;
-
-      var load = setInterval(function () {
-        $(".loading").text(loading + "%");
-        loading++;
-        let gray = "grayscale(" + (100 - loading) + "%)";
-
-        $(".logo-loading").css("filter", gray);
-        if (loading == 101) {
-          clearInterval(load);
-          $(".loading-logo").fadeOut();
-          $(".anim-image").attr("src", "./mainpage/1.png");
-          $(window).bind("mousewheel", function (event) {
-            if (timer) {
-              window.clearTimeout(timer);
-            }
-
-            timer = window.setTimeout(function () {
-              if (oddeven % 2 == 0) {
-                if (event.originalEvent.wheelDelta >= 0) {
-                  ++oddeven;
-                  if (counter > 1) {
-                    $(".anim-image").fadeOut();
-                    $(".anim-image-2").fadeIn();
-                    $(".anim-image-2").attr(
-                      "src",
-                      "./mainpage/" + --counter + ".png"
-                    );
-                    $(".red").css("width", String(counter / 37) * 100 + "%");
-                  }
-                } else {
-                  --oddeven;
-                  if (counter < 38) {
-                    if (counter != 37) {
-                      $(".anim-image").fadeOut();
-                      $(".anim-image-2").fadeIn();
-                      $(".anim-image-2").attr(
-                        "src",
-                        "./mainpage/" + ++counter + ".png"
-                      );
-
-                      $(".red").css(
-                        "width",
-                        String((counter / 37) * 100) + "%"
-                      );
-                    } else {
-                      $(".anim-image-2").attr(
-                        "src",
-                        "./mainpage/" + counter + ".png"
-                      );
-                      $(".red").css(
-                        "width",
-                        String((counter / 37) * 100) + "%"
-                      );
-                    }
-                  }
-                }
-              } else {
-                console.log("second Tim");
-                console.log(counter);
-                if (event.originalEvent.wheelDelta >= 0) {
-                  ++oddeven;
-                  if (counter > 1) {
-                    $(".anim-image-2").fadeOut();
-                    $(".anim-image").fadeIn();
-                    $(".anim-image").attr(
-                      "src",
-                      "./mainpage/" + --counter + ".png"
-                    );
-                    $(".red").css("width", String(counter / 37) * 100 + "%");
-                  }
-                } else {
-                  --oddeven;
-                  if (counter < 38) {
-                    if (counter != 37) {
-                      $(".anim-image-2").fadeOut();
-                      $(".anim-image").fadeIn();
-                      $(".anim-image").attr(
-                        "src",
-                        "./mainpage/" + ++counter + ".png"
-                      );
-
-                      $(".red").css(
-                        "width",
-                        String((counter / 37) * 100) + "%"
-                      );
-                    } else {
-                      $(".anim-image").attr(
-                        "src",
-                        "./mainpage/" + counter + ".png"
-                      );
-                      $(".red").css(
-                        "width",
-                        String((counter / 37) * 100) + "%"
-                      );
-                    }
-                  }
-                }
-              }
-            }, 100);
-          });
-        }
-      }, 30);
-    </script>
+    <script src="js/mainpage.js"></script>
   </body>
 </html>

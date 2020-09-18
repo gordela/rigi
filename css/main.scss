@@ -6,11 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -62,12 +57,48 @@ a {
 }
 
 .animation {
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   position: relative;
+  .btn-vrclad {
+    display: none;
+  }
 
+  .adg,
+  .mogv {
+    display: none;
+  }
+
+  .mogv {
+    width: 12vw;
+  }
+
+  .adg {
+    width: 18vw;
+  }
+
+  .rigi {
+    margin-left: 2vw;
+    display: none;
+  }
+  .vrclad,
+  .rigi {
+    width: 11vw;
+  }
+  #vrclad {
+    position: absolute;
+    bottom: 13.4vw;
+    left: 44.4vw;
+    img {
+      transition: 100ms;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
   img {
     width: 100%;
+
     object-fit: contain;
   }
 
