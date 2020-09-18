@@ -6,6 +6,11 @@ body {
   overflow-x: hidden;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -57,7 +62,7 @@ a {
   height: 100vh;
   overflow: hidden;
   position: relative;
-
+  height: -webkit-fill-available;
   img {
     width: 100%;
     object-fit: contain;
