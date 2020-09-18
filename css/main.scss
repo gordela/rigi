@@ -56,10 +56,35 @@ a {
 .animation {
   height: 100vh;
   overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
     object-fit: contain;
+  }
+
+  .loading-logo {
+    width: 14.5vw;
+    height: 23vw;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    p {
+      font-family: Bebas;
+      font-size: 1.6vw;
+      color: #707070;
+    }
+    .logo-loading {
+      width: 7vw;
+      filter: grayscale(100%);
+    }
   }
 }
 
